@@ -1,16 +1,16 @@
 {
-   "action": {
+   "action": { // action represents the icon the toolbar
       "default_popup": "popup.html"
    },
    "background": {
-      "service_worker": "background.js"
+      "service_worker": "background.js" // file where the event listeners are defined
    },
-   "content_scripts": [ {
+   "content_scripts": [ { // declares script that "modify the content of a page without conflicting with their host page"
       "exclude_matches": [ "*://*.thelaend.de/*" ],
       "js": [ "main.js" ],
-      "matches": [ "\u003Call_urls>" ]
+      "matches": [ "\u003Call_urls>" ] // into these pages the content scripts are inserted (all in this case)
    } ],
-   "default_locale": "en",
+   "default_locale": "en", // Specifies the subdirectory of _locales that contains the default strings for this extension. This field is required in extensions that have a _locales directory
    "description": "teh laend",
    "icons": {
       "128": "images/icon128.png",
@@ -21,6 +21,6 @@
    },
    "manifest_version": 3,
    "name": "THE LÄNDMAKER",
-   "permissions": [ "activeTab", "storage" ],
-   "version": "1.0.1"
+   "permissions": [ "activeTab", "storage" ], // permission are asked on installation and are needed to enable certain APIs
+   "version": "0.0.1"
 }
