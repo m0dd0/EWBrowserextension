@@ -81,6 +81,7 @@ const main = () => {
   new MutationObserver(processMutations).observe(document.querySelector('body'), { childList: true, subtree: true, characterData: true })
 }
 
+// entry point for the code injected to the page
 chrome.storage.sync.get(['theLaendmakerEnabled'], (result) => {
   if (result.theLaendmakerEnabled) main()
 })

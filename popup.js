@@ -1,3 +1,4 @@
+// tlm = the laend maker
 var tlmToggleWrapper = document.querySelector('.tlm__status')
 var tlmToggleButton = document.querySelector('.tlm__status-toggle')
 
